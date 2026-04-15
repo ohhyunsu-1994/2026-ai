@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Bamboo Moon Runner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="hud">
+      <div class="hud-chip">
+        <span class="hud-label">Score</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="hud-chip">
+        <span class="hud-label">Coins</span>
+        <strong id="coinCount">0</strong>
+      </div>
+      <div class="hud-chip">
+        <span class="hud-label">Slash</span>
+        <strong id="slashCount">0</strong>
+      </div>
+      <div class="hud-chip wide-chip">
+        <span class="hud-label">Guide</span>
+        <strong id="speedLabel">속도 7.0</strong>
+      </div>
+    </section>
+
+    <section class="stage-card">
+      <canvas id="gameCanvas" width="960" height="540" aria-label="대나무 숲 러닝 게임 화면"></canvas>
+
+      <div class="controls-hint">
+        <span>점프: Space / 위 화살표 / 탭</span>
+        <span>베기: Z / 아래로 스와이프</span>
+      </div>
+
+      <div id="overlay" class="overlay">
+        <div class="overlay-panel">
+          <p class="eyebrow">Web Runner</p>
+          <h1>Bamboo Moon Runner</h1>
+          <p id="overlayCopy" class="overlay-copy">
+            밤의 대나무 숲을 달리며 코인을 모으고, 모은 코인 10개마다 베기 1회를 얻으세요.
+            대나무가 길을 막으면 Z 키나 아래 스와이프로 직접 베어 지나갈 수 있습니다.
+          </p>
+          <button id="startButton" class="primary-button" type="button">게임 시작</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
